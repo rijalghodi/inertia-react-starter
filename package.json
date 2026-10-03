@@ -8,10 +8,10 @@
     "dev": "vp dev",
     "check": "vp check",
     "check:fix": "vp check --fix",
-    "types:check": "tsc --noEmit",
-    "format": "vp format",
+    "typecheck": "npx tsc --noEmit",
+    "format": "vp fmt",
     "lint": "vp lint",
-    "lint:fix": "vp lint --fix && npm run format"
+    "lint:fix": "vp lint --fix && vp fmt"
   },
   "dependencies": {
     "@inertiajs/react": "^3.0.0",

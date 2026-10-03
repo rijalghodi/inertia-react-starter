@@ -1,27 +1,97 @@
-# Laravel + React Starter Kit
+# Undangan.com
 
-## Introduction
+This is a web application built with Laravel and React, using [Inertia](https://inertiajs.com). This starter kit utilizes React, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
 
-Our React starter kit provides a robust, modern starting point for building Laravel applications with a React frontend using [Inertia](https://inertiajs.com).
+## Prerequisites
 
-Inertia allows you to build modern, single-page React applications using classic server-side routing and controllers. This lets you enjoy the frontend power of React combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+Before you begin, ensure you have the following installed on your machine:
 
-This React starter kit utilizes React 19, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
+- PHP (>= 8.2 recommended)
+- Composer
+- Node.js (>= 20 recommended)
+- npm or pnpm (this project includes a `pnpm-workspace.yaml`, so `pnpm` is highly recommended)
 
-## Official Documentation
+## Installation
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+1. **Install PHP dependencies** using Composer:
 
-## Contributing
+    ```bash
+    composer install
+    ```
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Install JavaScript dependencies** using your package manager:
 
-All contributions to the Starter Kits from now on should be made through [Maestro](https://github.com/laravel/maestro).
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
 
-## Code of Conduct
+3. **Environment Setup**:
+   Copy the example environment file and configure your local settings (like the database connection).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```bash
+    cp .env.example .env
+    ```
 
-## License
+4. **Generate Application Key**:
 
-The Laravel + React starter kit is open-sourced software licensed under the MIT license.
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Run Database Migrations** (if your database is configured):
+    ```bash
+    php artisan migrate
+    ```
+
+## Development Guide
+
+To work on the project locally, you need to run both the Laravel development server and the Vite development server to compile frontend assets with Hot Module Replacement (HMR).
+
+1. **Start the Laravel backend server**:
+
+    ```bash
+    php artisan serve
+    ```
+
+    _Your backend server will typically be available at `http://localhost:8000`._
+
+2. **Start the Vite frontend development server**:
+   In a new, separate terminal window, run:
+    ```bash
+    npm run dev
+    # or
+    pnpm dev
+    ```
+    _This enables real-time updates for your React components as you edit them._
+
+## Build and Run for Production
+
+When preparing the application for a production environment, you need to build the frontend assets and optimize the backend.
+
+1. **Build frontend assets**:
+   This compiles and minifies your React application and CSS for production.
+
+    ```bash
+    npm run build
+    # or
+    pnpm build
+    ```
+
+    _The compiled files will be output to the `public/build` directory._
+
+2. **Optimize Laravel configuration**:
+   Cache your configuration, routes, and views to improve performance:
+
+    ```bash
+    php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
+    ```
+
+3. **Directory Permissions** (if running on a Linux web server):
+   Ensure your web server has write access to the necessary directories:
+    ```bash
+    chmod -R 775 storage bootstrap/cache
+    ```

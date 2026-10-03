@@ -3443,7 +3443,6 @@
                 "2fa",
                 "Authentication",
                 "MFA",
-                "Two Factor Authentication",
                 "google-authenticator",
                 "google2fa",
                 "hotp",

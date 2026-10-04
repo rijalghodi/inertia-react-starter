@@ -62,7 +62,7 @@ export default defineConfig({
     trailingComma: "all",
     sortImports: true,
     htmlWhitespaceSensitivity: "css",
-    ignorePatterns: [".github/**", "composer.json", "resources/js/components/ui/*", "resources/views/mail/*"],
+    ignorePatterns: [".github/**", "composer.json", "resources/views/mail/*"],
     sortTailwindcss: {
       functions: ["clsx", "cn", "cva"],
       stylesheet: "resources/css/app.css",

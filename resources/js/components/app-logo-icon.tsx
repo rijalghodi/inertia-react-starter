@@ -1,13 +1,23 @@
 import type { SVGAttributes } from "react";
 
-export default function AppLogoIcon(props: SVGAttributes<SVGElement>) {
+export default function AppLogoIcon({ resetColor, ...props }: SVGAttributes<SVGElement> & { resetColor?: boolean }) {
   return (
-    <svg {...props} viewBox="0 0 40 42" xmlns="http://www.w3.org/2000/svg">
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M17.2 5.63325L8.6 0.855469L0 5.63325V32.1434L16.2 41.1434L32.4 32.1434V23.699L40 19.4767V9.85547L31.4 5.07769L22.8 9.85547V18.2999L17.2 21.411V5.63325ZM38 18.2999L32.4 21.411V15.2545L38 12.1434V18.2999ZM36.9409 10.4439L31.4 13.5221L25.8591 10.4439L31.4 7.36561L36.9409 10.4439ZM24.8 18.2999V12.1434L30.4 15.2545V21.411L24.8 18.2999ZM23.8 20.0323L29.3409 23.1105L16.2 30.411L10.6591 27.3328L23.8 20.0323ZM7.6 27.9212L15.2 32.1434V38.2999L2 30.9666V7.92116L7.6 11.0323V27.9212ZM8.6 9.29991L3.05913 6.22165L8.6 3.14339L14.1409 6.22165L8.6 9.29991ZM30.4 24.8101L17.2 32.1434V38.2999L30.4 30.9666V24.8101ZM9.6 11.0323L15.2 7.92117V22.5221L9.6 25.6333V11.0323Z"
-      />
+    <svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <g clipPath="url(#clip0_2_11)">
+        <path
+          d="M250 487.5C190.5 487.5 143.75 471.067 109.75 438.2C75.75 404.767 58.75 359.433 58.75 302.2V11.5H165V301.35C165 330.817 172.367 353.767 187.1 370.2C201.833 386.633 222.8 394.85 250 394.85C276.633 394.85 297.317 386.633 312.05 370.2C327.35 353.767 335 330.817 335 301.35V11.5H441.25V302.2C441.25 359.433 423.967 404.767 389.4 438.2C354.833 471.067 308.367 487.5 250 487.5Z"
+          fill="url(#paint0_linear_2_11)"
+        />
+      </g>
+      <defs>
+        <linearGradient id="paint0_linear_2_11" x1="250" y1="-227" x2="250" y2="573" gradientUnits="userSpaceOnUse">
+          <stop stopColor={resetColor ? "currentColor" : "#875F67"} />
+          <stop offset="1" stopColor={resetColor ? "currentColor" : "#4D1520"} />
+        </linearGradient>
+        <clipPath id="clip0_2_11">
+          <rect width="500" height="500" fill="white" />
+        </clipPath>
+      </defs>
     </svg>
   );
 }

@@ -72,7 +72,7 @@ export default function Login() {
     <>
       <Head title="Masuk atau Daftar" />
 
-      {status && <div className="text-success mb-4 text-center text-sm font-medium">{status}</div>}
+      {status && <div className="mb-4 text-center text-sm font-medium text-success">{status}</div>}
 
       <form onSubmit={sendMagicLink} className="flex flex-col gap-6">
         <div className="grid gap-4">

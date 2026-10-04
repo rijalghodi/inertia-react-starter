@@ -16,7 +16,7 @@ export default defineConfig({
         bunny("Inter", {
           weights: [400, 500, 600, 700],
         }),
-        bunny("Cormorant Garamond", {
+        bunny("Ovo", {
           weights: [400, 500, 600, 700],
         }),
       ],

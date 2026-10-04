@@ -66,6 +66,14 @@ To work on the project locally, you need to run both the Laravel development ser
    ```
    _This enables real-time updates for your React components as you edit them._
 
+3. **Other tools**:
+
+   ```bash
+   npm run lint:fix   // Fixes linting errors
+   npm run format    // Formats code
+   npm run typecheck // Checks TypeScript types
+   ```
+
 ## Build and Run for Production
 
 When preparing the application for a production environment, you need to build the frontend assets and optimize the backend.
@@ -95,3 +103,4 @@ When preparing the application for a production environment, you need to build t
    ```bash
    chmod -R 775 storage bootstrap/cache
    ```
+

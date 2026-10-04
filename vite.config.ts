@@ -44,7 +44,6 @@ export default defineConfig({
       "bootstrap/ssr/**",
       "tailwind.config.js",
       "resources/js/actions/**",
-      "resources/js/components/ui/*",
       "resources/js/routes/**",
       "resources/js/wayfinder/**",
     ],

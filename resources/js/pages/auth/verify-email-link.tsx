@@ -52,7 +52,7 @@ export default function VerifyEmailLink() {
         setNeedsEmail(true);
         setProcessing(false);
       } else {
-        processSignIn(savedEmail);
+        void processSignIn(savedEmail);
       }
     } else {
       setProcessing(false);
@@ -64,7 +64,7 @@ export default function VerifyEmailLink() {
     e.preventDefault();
     setProcessing(true);
     setError("");
-    processSignIn(email);
+    void processSignIn(email);
   };
 
   return (

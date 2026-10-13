@@ -1,4 +1,4 @@
-# Undangan.com
+# Laravel + Inertia.js + React + PostgreSQL starter stack.
 
 This is a web application built with Laravel and React, using [Inertia](https://inertiajs.com). This starter kit utilizes React, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
 
